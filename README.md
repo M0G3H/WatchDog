@@ -1,6 +1,10 @@
 # WatchDog
 
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/M0G3H/WatchDog/main/watchdog.png" alt="Recon Tool" width="800">
+</p>
+
 WATCHDOG is a lightweight Bash-based reconnaissance utility that monitors changes in web directories and subdomains over time. It uses [ffuf](https://github.com/ffuf/ffuf) to discover accessible paths and subdomains, compares the latest scan results against previously saved baselines, and records newly discovered and disappeared entries in change logs.
 
 Designed for security researchers, penetration testers, and reconnaissance workflows, WATCHDOG helps identify changes in a target's external attack surface without manually comparing scan results.
