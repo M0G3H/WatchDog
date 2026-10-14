@@ -87,6 +87,8 @@ rm ~/Desktop/watchdog/new_sub.csv
 #check for directory change and action
 check_dir_change_and_action() {
 if cmp -s "$OLD_DIR" "$NEW_DIR"; then
+	echo "[date] $(date '+%Y-%m-%d %H:%M:%S')" >> "$CHANGE_DIR"
+	echo "[does not find any change]" >> "$CHANGE_DIR"
 	rm "$NEW_DIR"
 else
 	echo "[date] $(date '+%Y-%m-%d %H:%M:%S')" >> "$CHANGE_DIR"
@@ -101,6 +103,8 @@ fi
 #check for subdomain change and action
 check_sub_change_and_action() {
 if cmp -s "$OLD_SUB" "$NEW_SUB"; then
+		echo "[date] $(date '+%Y-%m-%d %H:%M:%S')" >> "$CHANGE_SUB"
+		echo "[does not find any change]"  >> "$CHANGE_SUB"
         rm "$NEW_SUB"
 else
         echo "[date] $(date '+%Y-%m-%d %H:%M:%S')" >> "$CHANGE_SUB"
